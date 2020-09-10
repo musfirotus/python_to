@@ -1,0 +1,8 @@
+README.md
+setup.py
+cliweather_fira.egg-info/PKG-INFO
+cliweather_fira.egg-info/SOURCES.txt
+cliweather_fira.egg-info/dependency_links.txt
+cliweather_fira.egg-info/entry_points.txt
+cliweather_fira.egg-info/requires.txt
+cliweather_fira.egg-info/top_level.txt
