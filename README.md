@@ -1,8 +1,8 @@
 # Week 8 Day 4 ~ Try Out Python
-- [ ] 1. Current Weather
+- [x] 1. Current Weather ~ kurang point terakhir
     - [x] Berdasarkan Kota
-    - [ ] Menampilkan celcius dan fahrenheit
-    - [ ] Menampilkan suhunya saja
+    - [x] Menampilkan celcius dan fahrenheit
+    - [x] Menampilkan suhunya saja
 - [ ] 2. Multiple Weather
 - [ ] 3. Cuaca dalam interval 3 jam
     - [ ] Command forecast
