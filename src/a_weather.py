@@ -1,3 +1,12 @@
+import os
+from os.path import join, dirname
+from dotenv import load_dotenv
+
+dotenv_path = join(dirname(__file__), '.env')
+load_dotenv(dotenv_path)
+
+api = os.environ.get("API_KEY")
+
 import asyncio # install
 import click # install
 import json
@@ -30,7 +39,7 @@ async def weather(city,celcius,fahrenheit,temp,kelvin):
     word = "Celcius" if celcius else "Fahrenheit" if fahrenheit else "Kelvin"
     temps = tempss if tempss else None
     print(f"started at {time.strftime('%X')}")
-    datas = await fetcher.get(f'http://api.openweathermap.org/data/2.5/weather?q={city.lower()}&units={temps}&appid=b778b00e0b799500ac184f565004d718')
+    datas = await fetcher.get(f'http://api.openweathermap.org/data/2.5/weather?q={city.lower()}&units={temps}&appid={api}')
     data = json.loads(datas)
     # print(data)
     dates = datetime.fromtimestamp(1599712037).strftime("%A, %B %d, %Y %H:%M:%S %p")
@@ -42,7 +51,7 @@ async def weather(city,celcius,fahrenheit,temp,kelvin):
             print('-' * len(dates))
             print(f"{data['main']['temp']} {word} | {data['clouds']['all']}")
         else:
-            if celcius or fahrenheit or kelvin:
+            if (celcius or fahrenheit or kelvin) or city:
                 results = []
                 results.append(f"datetime\t: {dates}")
                 results.append(f"city\t\t: {data['name']}")
