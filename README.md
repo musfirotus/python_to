@@ -12,5 +12,6 @@
     - [ ] 7 hari kedepan
 
 ## Note :
+- File env harus didalam src ~ biar ngga error, wkwk
 - Ini repo sesuai deadline
 - Repo yang melebihi deadline, ada di branch kedua
